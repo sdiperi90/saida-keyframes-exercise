@@ -1,0 +1,79 @@
+.parent {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    justify-content: center;
+}
+
+.hi {
+    text-align: center;
+    padding: 100px;
+}
+
+.child1 {
+    background: red;
+    width: 100px;
+    height: 100px;
+    animation: moveBox 2s ease-in-out infinite normal;
+    transform-origin: 0% 0%;
+}
+
+.child2 {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    animation: moveBoxreverse 2s ease-in-out infinite normal;
+    transform-origin: 0% 100%;
+}
+
+.child3 {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    transform-origin: 100% 0%;
+    animation: moveBoxreverse 2s ease-in-out infinite normal;
+}
+
+.child4 {
+    background: green;
+    width: 100px;
+    height: 100px;
+    transform-origin: 100% 100%;
+    animation: moveBox 2s ease-in-out infinite normal;
+}
+
+@keyframes moveBox {
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 25% {
+        transform: rotate(45deg);
+    } */
+    50% {
+        transform: rotate(90deg);
+    }
+    /* 75% {
+        transform: rotate(45deg);
+    } */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes moveBoxreverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 25% {
+        transform: rotate(-45deg);
+    } */
+    50% {
+        transform: rotate(-90deg);
+    }
+    /* 75% {
+        transform: rotate(-90deg);
+    } */
+    100% {
+        transform: rotate(0deg);
+    }
+}
